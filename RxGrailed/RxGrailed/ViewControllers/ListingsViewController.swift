@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 final class ListingsViewController: UIViewController {
 
@@ -16,7 +17,18 @@ final class ListingsViewController: UIViewController {
 
     // MARK: Private properties
 
-    @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private var collectionView: UICollectionView! {
+        didSet {
+            let layout = (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)
+            let spacing: CGFloat = 16.0
+
+            layout?.minimumInteritemSpacing = spacing
+            layout?.itemSize = CGSize(
+                width: (UIScreen.main.bounds.width - spacing) / 2,
+                height: 224
+            )
+        }
+    }
  
     private let disposeBag = DisposeBag()
     private var viewModel: ListingsDisplayable!
@@ -26,9 +38,21 @@ final class ListingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        KingfisherManager.shared.cache.clearDiskCache()
+
         viewModel = ListingsViewModel()
 
-        viewModel.setupObservables(paginate: Observable.never())
+        let paginate = collectionView.rx.contentOffset
+            .map { [weak self] _ -> Bool in
+                guard let `self` = self else { return false }
+
+                return self.collectionView.isNearBottom(threshold: 200)
+            }
+            .distinctUntilChanged()
+            .filter { $0 }
+            .map { _ in () }
+
+        viewModel.setupObservables(paginate: paginate)
         viewModel
             .listings
             .bindTo(collectionView.rx.items(cellIdentifier: "listingCell", cellType: ListingCollectionViewCell.self)) { _, viewModel, cell in

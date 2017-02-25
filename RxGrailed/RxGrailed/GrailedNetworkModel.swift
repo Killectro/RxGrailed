@@ -53,13 +53,11 @@ private extension GrailedNetworkModel {
                     obs.onError(error)
                 } else {
                     // Force unwrapping here is safe since it will always be present
-                    // in this case, according to Angolia's headers
+                    // in this case, according to Algolia's headers
                     obs.onNext(content!)
                     obs.onCompleted()
                 }
             }
-
-            operation.start()
 
             return Disposables.create {
                 operation.cancel()
@@ -81,5 +79,6 @@ private extension GrailedNetworkModel {
             }, onError: { _ in
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             })
+            .shareReplay(1)
     }
 }

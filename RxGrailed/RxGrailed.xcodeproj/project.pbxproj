@@ -10,6 +10,7 @@
 		02283443C3B21054ACB12005 /* Pods_RxGrailed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70EC920A4D6715E4CADFC74 /* Pods_RxGrailed.framework */; };
 		A430AB0D1E6233AC00E0C656 /* Kingfisher+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */; };
 		A430AB0F1E62342500E0C656 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0E1E62342500E0C656 /* ListingViewModel.swift */; };
+		A430AB111E623BF400E0C656 /* UIScrollView+IsNearBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */; };
 		A4A395591E61E91100C06A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395581E61E91100C06A89 /* AppDelegate.swift */; };
 		A4A3955B1E61E91100C06A89 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */; };
 		A4A3955E1E61E91100C06A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A3955C1E61E91100C06A89 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		9FBB6104F66DEB28F4FC3737 /* Pods-RxGrailedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailedTests/Pods-RxGrailedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
 		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingViewModel.swift; path = RxGrailed/ListingViewModel.swift; sourceTree = SOURCE_ROOT; };
+		A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+IsNearBottom.swift"; sourceTree = "<group>"; };
 		A4A395551E61E91100C06A89 /* RxGrailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxGrailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A395581E61E91100C06A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */,
 				A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */,
+				A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A430AB111E623BF400E0C656 /* UIScrollView+IsNearBottom.swift in Sources */,
 				A4A3955B1E61E91100C06A89 /* ListingsViewController.swift in Sources */,
 				A4A395851E6214F200C06A89 /* Algolia+RxSwift.swift in Sources */,
 				A4A395591E61E91100C06A89 /* AppDelegate.swift in Sources */,

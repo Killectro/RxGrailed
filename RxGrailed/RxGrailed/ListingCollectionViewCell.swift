@@ -32,7 +32,7 @@ final class ListingCollectionViewCell: UICollectionViewCell {
 
     func setup(with viewModel: ListingDisplayable) {
         viewModel.image
-            .bindTo(coverImageView.rx.image)
+            .drive(coverImageView.rx.image)
             .disposed(by: disposeBag)
 
         designerLabel.text = viewModel.designer

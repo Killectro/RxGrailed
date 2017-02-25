@@ -8,10 +8,11 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 import Kingfisher
 
 protocol ListingDisplayable {
-    var image: Observable<UIImage> { get }
+    var image: Driver<UIImage?> { get }
     var price: String { get }
     var designer: String { get }
     var title: String { get }
@@ -23,7 +24,7 @@ final class ListingViewModel: ListingDisplayable {
 
     // MARK: Public properties
 
-    let image: Observable<UIImage>
+    let image: Driver<UIImage?>
     let price: String
     let designer: String
     let title: String
@@ -39,7 +40,10 @@ final class ListingViewModel: ListingDisplayable {
     init(listing: Listing) {
         self.listing = listing
 
-        image = KingfisherManager.shared.rx.image(URL: listing.imageUrl, optionsInfo: [.backgroundDecode])
+        image = KingfisherManager.shared.rx
+            .image(URL: listing.imageUrl, optionsInfo: [.backgroundDecode])
+            .asDriver(onErrorJustReturn: nil)
+
         price = String(format: "$%d", listing.price)
         designer = listing.designer.uppercased()
         title = listing.title
