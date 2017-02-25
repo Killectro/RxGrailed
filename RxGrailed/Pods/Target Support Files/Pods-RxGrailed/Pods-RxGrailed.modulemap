@@ -1,0 +1,6 @@
+framework module Pods_RxGrailed {
+  umbrella header "Pods-RxGrailed-umbrella.h"
+
+  export *
+  module * { export * }
+}

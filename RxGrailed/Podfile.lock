@@ -1,0 +1,32 @@
+PODS:
+  - Action (2.2.1):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - AlgoliaSearch-Client-Swift (4.7)
+  - ModelMapper (6.0.0)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxDataSources (1.0.2):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.2.0)
+
+DEPENDENCIES:
+  - Action
+  - AlgoliaSearch-Client-Swift (~> 4.0)
+  - ModelMapper
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
+
+SPEC CHECKSUMS:
+  Action: 93c6c9eec95eb76428b2d49a6d260466c2f71b7e
+  AlgoliaSearch-Client-Swift: 1fecaee39b416d513f438246e33634a8e3a04ced
+  ModelMapper: 3596a82f26c43491f6a8d3a00bcdba6ba0e62a93
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxDataSources: 1de77880bf5b7fcee42102adcd5a5d65e5b81541
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+
+PODFILE CHECKSUM: ebc02a9b43d3a4b31c2a656847512eb5430aed3a
+
+COCOAPODS: 1.1.1
