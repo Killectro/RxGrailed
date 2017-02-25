@@ -11,24 +11,37 @@ import AlgoliaSearch
 import RxSwift
 
 protocol GrailedNetworkModelable {
-    func getListings() -> Observable<[Listing]>
+    func getListings(paginate: Observable<Void>, loadedSoFar: [Listing]) -> Observable<[Listing]>
 //    func getDetails(of: Listing)
 }
 
 struct GrailedNetworkModel: GrailedNetworkModelable {
-    private let client: Client
-    private let searchIndex: Index
+    fileprivate let client: Client
+    fileprivate let searchIndex: Index
 
     init() {
         client = Client(appID: "MNRWEFSS2Q", apiKey: "ce26ba82dbc20d4f25c28a2077ce159d")
         searchIndex = client.index(withName: "Listing_production")
     }
 
-    func getListings() -> Observable<[Listing]> {
-        return getListingJSON().mapArray(Listing.self, keyPath: "hits")
-    }
+    func getListings(paginate: Observable<Void>, loadedSoFar: [Listing]) -> Observable<[Listing]> {
+        return getMoreListings().flatMap { newPage -> Observable<[Listing]> in
 
-    private func getListingJSON() -> Observable<JSONObject> {
+            let newListings = loadedSoFar + newPage
+
+            let obs = [
+                Observable.just(newListings),
+                Observable.never().takeUntil(paginate),
+                self.getListings(paginate: paginate, loadedSoFar: newListings)
+            ]
+
+            return Observable.concat(obs)
+        }
+    }
+}
+
+private extension GrailedNetworkModel {
+    func getListingJSON() -> Observable<JSONObject> {
 
         return Observable.create { obs in
 
@@ -41,7 +54,6 @@ struct GrailedNetworkModel: GrailedNetworkModelable {
                 } else {
                     // Force unwrapping here is safe since it will always be present
                     // in this case, according to Angolia's headers
-                    print(content!)
                     obs.onNext(content!)
                     obs.onCompleted()
                 }
@@ -53,5 +65,21 @@ struct GrailedNetworkModel: GrailedNetworkModelable {
                 operation.cancel()
             }
         }
+    }
+
+    func getMoreListings() -> Observable<[Listing]> {
+        return getListingJSON()
+            .subscribeOn(MainScheduler.instance)
+            .do(onSubscribe: { _ in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            })
+            .mapArray(Listing.self, keyPath: "hits")
+            .retry(3)
+            .observeOn(MainScheduler.instance)
+            .do(onNext: { _ in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }, onError: { _ in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            })
     }
 }

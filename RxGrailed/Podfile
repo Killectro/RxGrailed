@@ -12,6 +12,7 @@ target 'RxGrailed' do
   pod 'RxDataSources'
   pod 'Action'
   pod 'ModelMapper'
+  pod 'Kingfisher'
 
   target 'RxGrailedTests' do
     inherit! :search_paths

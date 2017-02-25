@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Grail List View Controller-->
+        <!--Listings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GrailListViewController" customModule="RxGrailed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListingsViewController" customModule="RxGrailed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,8 +32,8 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Okf-U1-Zxj">
-                                        <rect key="frame" x="88" y="0.0" width="200" height="224"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="listingCell" id="Okf-U1-Zxj" customClass="ListingCollectionViewCell" customModule="RxGrailed" customModuleProvider="target">
+                                        <rect key="frame" x="87.5" y="0.0" width="200" height="224"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="224"/>
@@ -96,6 +96,13 @@
                                             <constraint firstItem="WV2-yj-xXN" firstAttribute="baseline" secondItem="Jnw-xn-51y" secondAttribute="baseline" id="g3K-Z3-ZAI"/>
                                             <constraint firstItem="bbG-HG-mQn" firstAttribute="top" secondItem="Jnw-xn-51y" secondAttribute="bottom" constant="3" id="i7w-aI-Cct"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="coverImageView" destination="QBD-71-8bV" id="fle-PJ-5Se"/>
+                                            <outlet property="designerLabel" destination="Jnw-xn-51y" id="Sja-Ph-8Fj"/>
+                                            <outlet property="priceLabel" destination="xBb-HU-eFD" id="QVG-xR-tbU"/>
+                                            <outlet property="sizeLabel" destination="WV2-yj-xXN" id="LQb-GF-tVg"/>
+                                            <outlet property="titleLabel" destination="bbG-HG-mQn" id="mJr-z9-wRj"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

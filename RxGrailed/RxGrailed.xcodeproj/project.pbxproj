@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		02283443C3B21054ACB12005 /* Pods_RxGrailed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70EC920A4D6715E4CADFC74 /* Pods_RxGrailed.framework */; };
+		A430AB0D1E6233AC00E0C656 /* Kingfisher+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */; };
+		A430AB0F1E62342500E0C656 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0E1E62342500E0C656 /* ListingViewModel.swift */; };
 		A4A395591E61E91100C06A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395581E61E91100C06A89 /* AppDelegate.swift */; };
-		A4A3955B1E61E91100C06A89 /* GrailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3955A1E61E91100C06A89 /* GrailListViewController.swift */; };
+		A4A3955B1E61E91100C06A89 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */; };
 		A4A3955E1E61E91100C06A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A3955C1E61E91100C06A89 /* Main.storyboard */; };
 		A4A395601E61E91100C06A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A3955F1E61E91100C06A89 /* Assets.xcassets */; };
 		A4A395631E61E91100C06A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A395611E61E91100C06A89 /* LaunchScreen.storyboard */; };
@@ -17,6 +19,8 @@
 		A4A395801E61ECA000C06A89 /* GrailedNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3957F1E61ECA000C06A89 /* GrailedNetworkModel.swift */; };
 		A4A395821E62086000C06A89 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395811E62086000C06A89 /* Listing.swift */; };
 		A4A395851E6214F200C06A89 /* Algolia+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */; };
+		A4A395871E62275400C06A89 /* ListingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395861E62275400C06A89 /* ListingCollectionViewCell.swift */; };
+		A4A395891E62305F00C06A89 /* ListingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395881E62305F00C06A89 /* ListingsViewModel.swift */; };
 		BDD8B2B9D219FAA4585FDE1A /* Pods_RxGrailedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82810BC66273B429DCDB2947 /* Pods_RxGrailedTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +39,11 @@
 		63E97F05B349CD7EBE70FE48 /* Pods-RxGrailed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailed/Pods-RxGrailed.debug.xcconfig"; sourceTree = "<group>"; };
 		82810BC66273B429DCDB2947 /* Pods_RxGrailedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxGrailedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBB6104F66DEB28F4FC3737 /* Pods-RxGrailedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailedTests/Pods-RxGrailedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
+		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingViewModel.swift; path = RxGrailed/ListingViewModel.swift; sourceTree = SOURCE_ROOT; };
 		A4A395551E61E91100C06A89 /* RxGrailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxGrailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A395581E61E91100C06A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4A3955A1E61E91100C06A89 /* GrailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrailListViewController.swift; sourceTree = "<group>"; };
+		A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
 		A4A3955D1E61E91100C06A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4A3955F1E61E91100C06A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4A395621E61E91100C06A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +54,8 @@
 		A4A3957F1E61ECA000C06A89 /* GrailedNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GrailedNetworkModel.swift; path = RxGrailed/GrailedNetworkModel.swift; sourceTree = SOURCE_ROOT; };
 		A4A395811E62086000C06A89 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Listing.swift; path = RxGrailed/Listing.swift; sourceTree = SOURCE_ROOT; };
 		A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Algolia+RxSwift.swift"; sourceTree = "<group>"; };
+		A4A395861E62275400C06A89 /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingCollectionViewCell.swift; path = RxGrailed/ListingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		A4A395881E62305F00C06A89 /* ListingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingsViewModel.swift; path = RxGrailed/ListingsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		A70EC920A4D6715E4CADFC74 /* Pods_RxGrailed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxGrailed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFDACFB632659EEE13844E2 /* Pods-RxGrailedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailedTests/Pods-RxGrailedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +154,7 @@
 		A4A3957B1E61E96600C06A89 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A4A395861E62275400C06A89 /* ListingCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +162,8 @@
 		A4A3957C1E61E96B00C06A89 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A4A395881E62305F00C06A89 /* ListingsViewModel.swift */,
+				A430AB0E1E62342500E0C656 /* ListingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -160,7 +171,7 @@
 		A4A3957D1E61E97900C06A89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A4A3955A1E61E91100C06A89 /* GrailListViewController.swift */,
+				A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */,
+				A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -403,9 +415,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4A3955B1E61E91100C06A89 /* GrailListViewController.swift in Sources */,
+				A4A3955B1E61E91100C06A89 /* ListingsViewController.swift in Sources */,
 				A4A395851E6214F200C06A89 /* Algolia+RxSwift.swift in Sources */,
 				A4A395591E61E91100C06A89 /* AppDelegate.swift in Sources */,
+				A4A395891E62305F00C06A89 /* ListingsViewModel.swift in Sources */,
+				A4A395871E62275400C06A89 /* ListingCollectionViewCell.swift in Sources */,
+				A430AB0F1E62342500E0C656 /* ListingViewModel.swift in Sources */,
+				A430AB0D1E6233AC00E0C656 /* Kingfisher+Rx.swift in Sources */,
 				A4A395821E62086000C06A89 /* Listing.swift in Sources */,
 				A4A395801E61ECA000C06A89 /* GrailedNetworkModel.swift in Sources */,
 			);

@@ -12,7 +12,7 @@ import Foundation
 struct Listing {
     let id: Int
     let imageUrl: URL
-    let price: Double
+    let price: Int
     let designer: String
     let title: String
     let description: String
@@ -23,7 +23,7 @@ extension Listing: Mappable {
     init(map: Mapper) throws {
         self.id = try map.from("id")
         self.imageUrl = try map.from("retina_cover_photo.url")
-        self.price = try map.from("price")
+        self.price = try map.from("price_i")
         self.designer = try map.from("designer_names")
         self.title = try map.from("title")
         self.description = try map.from("description")
