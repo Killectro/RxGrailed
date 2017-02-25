@@ -50,6 +50,7 @@ final class ListingsViewController: UIViewController {
             }
             .distinctUntilChanged()
             .filter { $0 }
+            .throttle(0.5, scheduler: MainScheduler.instance) // Prevent an edge case where it figured multiple times in a row
             .map { _ in () }
 
         viewModel.setupObservables(paginate: paginate)

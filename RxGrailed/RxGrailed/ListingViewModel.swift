@@ -42,6 +42,7 @@ final class ListingViewModel: ListingDisplayable {
 
         image = KingfisherManager.shared.rx
             .image(URL: listing.imageUrl, optionsInfo: [.backgroundDecode])
+            .map(Optional.some)
             .asDriver(onErrorJustReturn: nil)
 
         price = String(format: "$%d", listing.price)
