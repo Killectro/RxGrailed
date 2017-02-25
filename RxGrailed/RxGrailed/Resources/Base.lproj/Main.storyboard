@@ -39,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="224"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QBD-71-8bV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QBD-71-8bV">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="fpM-Bm-h3V"/>
