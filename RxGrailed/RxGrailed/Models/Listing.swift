@@ -10,13 +10,28 @@ import Mapper
 import Foundation
 
 struct Listing {
+    /// The unique ID of the `Listing`
     let id: Int
+
+    /// The cover image's URL
     let imageUrl: URL
+
+    /// The integer price of the `Listing`
     let price: Int
+
+    /// The brand/designer name
     let designer: String
+
+    /// The title
     let title: String
+
+    /// The full description
     let description: String
+
+    /// Sizing information
     let size: String
+
+    /// The seller's name
     let sellerName: String
 }
 

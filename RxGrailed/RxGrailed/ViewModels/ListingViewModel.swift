@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
+/// Defines the basic information necessary to display a listing
 protocol ListingDisplayable {
     var image: Driver<UIImage?> { get }
     var price: String { get }

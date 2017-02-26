@@ -10,7 +10,17 @@ import Foundation
 import AlgoliaSearch
 import RxSwift
 
+/// Protocol that represents the entirety of `RxGrailed`'s networking capabilities.
+/// In a production app this would be split into network models for each controller, but
+/// here that is unnecessary
 protocol GrailedNetworkModelable {
+
+    /// Returns an observable of `Listing`s retrieved from the backend
+    ///
+    /// - Parameters:
+    ///   - paginate: Observable that triggers when the network model should trigger another request
+    ///   - loadedSoFar: The list of `Listing`s loaded thus far. Should start as an empty array
+    /// - Returns: An `Observable<[Listing]>` that has all of the `Listing` objects received from the backend
     func getListings(paginate: Observable<Void>, loadedSoFar: [Listing]) -> Observable<[Listing]>
 }
 
@@ -47,6 +57,10 @@ struct GrailedNetworkModel: GrailedNetworkModelable {
 private extension GrailedNetworkModel {
     private static var cursor: String? = nil
 
+
+    /// Retrieves raw JSON from the Algolia backend
+    ///
+    /// - Returns: An Observable of JSON
     func getListingJSON() -> Observable<JSONObject> {
 
         return Observable.create { obs in
@@ -83,6 +97,9 @@ private extension GrailedNetworkModel {
         }
     }
 
+    /// Retrieves a single page of `Listing` objects
+    ///
+    /// - Returns: An `Observable` of a single page of listings
     func getMoreListings() -> Observable<[Listing]> {
         return getListingJSON()
             .subscribeOn(MainScheduler.instance)

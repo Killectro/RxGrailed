@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 
+/// Defines the basic set of inputs and outputs necessary to display a list of `Listing`s
 protocol ListingsDisplayable {
     // MARK: Inputs
 
