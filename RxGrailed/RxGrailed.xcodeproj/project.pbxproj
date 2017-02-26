@@ -12,6 +12,10 @@
 		A430AB0F1E62342500E0C656 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0E1E62342500E0C656 /* ListingViewModel.swift */; };
 		A430AB111E623BF400E0C656 /* UIScrollView+IsNearBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */; };
 		A430AB131E624F5D00E0C656 /* ListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB121E624F5D00E0C656 /* ListingDetailViewController.swift */; };
+		A430AB161E6257D800E0C656 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB151E6257D800E0C656 /* AppCoordinator.swift */; };
+		A430AB181E6258AC00E0C656 /* UIStoryboard+RxGrailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB171E6258AC00E0C656 /* UIStoryboard+RxGrailed.swift */; };
+		A430AB1A1E62650C00E0C656 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB191E62650C00E0C656 /* Array+Safe.swift */; };
+		A430AB1C1E6266AF00E0C656 /* UIViewController+RxSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB1B1E6266AF00E0C656 /* UIViewController+RxSegues.swift */; };
 		A4A395591E61E91100C06A89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395581E61E91100C06A89 /* AppDelegate.swift */; };
 		A4A3955B1E61E91100C06A89 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */; };
 		A4A3955E1E61E91100C06A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A3955C1E61E91100C06A89 /* Main.storyboard */; };
@@ -45,6 +49,10 @@
 		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingViewModel.swift; path = RxGrailed/ListingViewModel.swift; sourceTree = SOURCE_ROOT; };
 		A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+IsNearBottom.swift"; sourceTree = "<group>"; };
 		A430AB121E624F5D00E0C656 /* ListingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
+		A430AB151E6257D800E0C656 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A430AB171E6258AC00E0C656 /* UIStoryboard+RxGrailed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+RxGrailed.swift"; sourceTree = "<group>"; };
+		A430AB191E62650C00E0C656 /* Array+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
+		A430AB1B1E6266AF00E0C656 /* UIViewController+RxSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxSegues.swift"; sourceTree = "<group>"; };
 		A4A395551E61E91100C06A89 /* RxGrailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxGrailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A395581E61E91100C06A89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A430AB141E6257BF00E0C656 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A430AB151E6257D800E0C656 /* AppCoordinator.swift */,
+			);
+			name = Coordinators;
+			sourceTree = "<group>";
+		};
 		A4A3954C1E61E91000C06A89 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +123,7 @@
 		A4A395571E61E91100C06A89 /* RxGrailed */ = {
 			isa = PBXGroup;
 			children = (
+				A430AB141E6257BF00E0C656 /* Coordinators */,
 				A4A395831E62149C00C06A89 /* Extensions */,
 				A4A395781E61E95700C06A89 /* App */,
 				A4A3957A1E61E96100C06A89 /* Models */,
@@ -195,6 +212,9 @@
 				A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */,
 				A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */,
 				A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */,
+				A430AB171E6258AC00E0C656 /* UIStoryboard+RxGrailed.swift */,
+				A430AB191E62650C00E0C656 /* Array+Safe.swift */,
+				A430AB1B1E6266AF00E0C656 /* UIViewController+RxSegues.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -421,14 +441,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A430AB181E6258AC00E0C656 /* UIStoryboard+RxGrailed.swift in Sources */,
+				A430AB161E6257D800E0C656 /* AppCoordinator.swift in Sources */,
 				A430AB111E623BF400E0C656 /* UIScrollView+IsNearBottom.swift in Sources */,
 				A4A3955B1E61E91100C06A89 /* ListingsViewController.swift in Sources */,
+				A430AB1C1E6266AF00E0C656 /* UIViewController+RxSegues.swift in Sources */,
 				A4A395851E6214F200C06A89 /* Algolia+RxSwift.swift in Sources */,
 				A4A395591E61E91100C06A89 /* AppDelegate.swift in Sources */,
 				A4A395891E62305F00C06A89 /* ListingsViewModel.swift in Sources */,
 				A430AB131E624F5D00E0C656 /* ListingDetailViewController.swift in Sources */,
 				A4A395871E62275400C06A89 /* ListingCollectionViewCell.swift in Sources */,
 				A430AB0F1E62342500E0C656 /* ListingViewModel.swift in Sources */,
+				A430AB1A1E62650C00E0C656 /* Array+Safe.swift in Sources */,
 				A430AB0D1E6233AC00E0C656 /* Kingfisher+Rx.swift in Sources */,
 				A4A395821E62086000C06A89 /* Listing.swift in Sources */,
 				A4A395801E61ECA000C06A89 /* GrailedNetworkModel.swift in Sources */,

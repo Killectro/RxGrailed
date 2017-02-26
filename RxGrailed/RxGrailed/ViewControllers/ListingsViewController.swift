@@ -9,11 +9,14 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxOptional
 import Kingfisher
 
 final class ListingsViewController: UIViewController {
 
     // MARK: Public properties
+
+    lazy var didSelectViewModel: Driver<ListingDisplayable> = self._didSelectViewModel.asDriver().filterNil()
 
     // MARK: Private properties
 
@@ -29,7 +32,8 @@ final class ListingsViewController: UIViewController {
             )
         }
     }
- 
+
+    private let _didSelectViewModel = Variable<ListingDisplayable?>(nil)
     private let disposeBag = DisposeBag()
     private var viewModel: ListingsDisplayable!
 
@@ -42,6 +46,10 @@ final class ListingsViewController: UIViewController {
 
         viewModel = ListingsViewModel()
 
+        setupBindings()
+    }
+
+    private func setupBindings() {
         let paginate = collectionView.rx.contentOffset
             .map { [weak self] _ -> Bool in
                 guard let `self` = self else { return false }
@@ -54,6 +62,7 @@ final class ListingsViewController: UIViewController {
             .map { _ in () }
 
         viewModel.setupObservables(paginate: paginate)
+
         viewModel
             .listings
             .bindTo(collectionView.rx.items(cellIdentifier: "listingCell", cellType: ListingCollectionViewCell.self)) { _, viewModel, cell in
@@ -61,19 +70,9 @@ final class ListingsViewController: UIViewController {
             }
             .disposed(by: disposeBag)
 
-        collectionView.rx.modelSelected(ListingDisplayable.self)
-            .asDriver()
-            .drive(onNext: { [weak self] viewModel in
-                self?.performSegue(withIdentifier: "ListingsToListingDetailSegue", sender: viewModel)
-            })
+        collectionView.rx
+            .modelSelected(ListingDisplayable.self)
+            .bindTo(_didSelectViewModel)
             .disposed(by: disposeBag)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard
-            let detail = segue.destination as? ListingDetailViewController,
-            let sender = sender as? ListingDisplayable else { return }
-
-        detail.viewModel = sender
     }
 }
