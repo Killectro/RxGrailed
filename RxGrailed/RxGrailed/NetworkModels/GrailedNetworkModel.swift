@@ -29,8 +29,13 @@ struct GrailedNetworkModel: GrailedNetworkModelable {
             let newListings = loadedSoFar + newPage
 
             let obs = [
+                // Return our current list of Listings
                 Observable.just(newListings),
+
+                // Wait until we are told to paginate
                 Observable.never().takeUntil(paginate),
+
+                // Retrieve the next list of listings
                 self.getListings(paginate: paginate, loadedSoFar: newListings)
             ]
 
@@ -40,17 +45,18 @@ struct GrailedNetworkModel: GrailedNetworkModelable {
 }
 
 private extension GrailedNetworkModel {
+    private static var cursor: String? = nil
+
     func getListingJSON() -> Observable<JSONObject> {
 
         return Observable.create { obs in
 
-            let query = Query(query: nil)
-            query.hitsPerPage = 50
-
-            let operation = self.searchIndex.browse(query: query) { content, error in
+            let completion: (JSONObject?, Error?) -> () = { content, error in
                 if let error = error {
                     obs.onError(error)
                 } else {
+                    GrailedNetworkModel.cursor = content?["cursor"] as? String
+
                     // Force unwrapping here is safe since it will always be present
                     // in this case, according to Algolia's headers
                     obs.onNext(content!)
@@ -58,8 +64,21 @@ private extension GrailedNetworkModel {
                 }
             }
 
-            return Disposables.create {
-                operation.cancel()
+            if let cursor = GrailedNetworkModel.cursor {
+                let operation = self.searchIndex.browse(from: cursor, completionHandler: completion)
+
+                return Disposables.create {
+                    operation.cancel()
+                }
+            } else {
+                let query = Query(query: nil)
+                query.hitsPerPage = 50
+
+                let operation = self.searchIndex.browse(query: query, completionHandler: completion)
+
+                return Disposables.create {
+                    operation.cancel()
+                }
             }
         }
     }

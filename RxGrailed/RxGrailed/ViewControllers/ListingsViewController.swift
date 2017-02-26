@@ -51,15 +51,15 @@ final class ListingsViewController: UIViewController {
 
     private func setupBindings() {
         let paginate = collectionView.rx.contentOffset
-            .map { [weak self] _ -> Bool in
+            .filter { [weak self] offset in
                 guard let `self` = self else { return false }
 
                 return self.collectionView.isNearBottom(threshold: 200)
             }
-            .distinctUntilChanged()
-            .filter { $0 }
-            .throttle(0.5, scheduler: MainScheduler.instance) // Prevent an edge case where it figured multiple times in a row
-            .map { _ in () }
+            // If we don't skip, after paginating once the network model will subscribe again and receive
+            // another `onNext` event, which will trigger another pagination request
+            .skip(1)
+            .flatMap { _ in return Observable.just() }
 
         viewModel.setupObservables(paginate: paginate)
 
