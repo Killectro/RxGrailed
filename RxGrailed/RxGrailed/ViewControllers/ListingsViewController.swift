@@ -42,8 +42,6 @@ final class ListingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        KingfisherManager.shared.cache.clearDiskCache()
-
         viewModel = ListingsViewModel()
 
         setupBindings()
