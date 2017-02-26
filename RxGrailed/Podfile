@@ -9,8 +9,6 @@ target 'RxGrailed' do
   pod 'AlgoliaSearch-Client-Swift', '~> 4.0'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'RxDataSources'
-  pod 'Action'
   pod 'ModelMapper'
   pod 'Kingfisher'
   pod 'RxOptional'
