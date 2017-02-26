@@ -46,7 +46,10 @@ final class ListingViewModel: ListingDisplayable {
 
         image = KingfisherManager.shared.rx
             .image(URL: listing.imageUrl, optionsInfo: [.backgroundDecode])
+            .retry(3)
             .map(Optional.some)
+            // When an image fetch is cancelled it returns an error, but we don't want to
+            // bind that error to our UI so we catch it here and just return `nil`
             .asDriver(onErrorJustReturn: nil)
 
         price = String(format: "$%d", listing.price)
