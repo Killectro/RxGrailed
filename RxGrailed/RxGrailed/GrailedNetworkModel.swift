@@ -12,7 +12,6 @@ import RxSwift
 
 protocol GrailedNetworkModelable {
     func getListings(paginate: Observable<Void>, loadedSoFar: [Listing]) -> Observable<[Listing]>
-//    func getDetails(of: Listing)
 }
 
 struct GrailedNetworkModel: GrailedNetworkModelable {

@@ -18,6 +18,8 @@ protocol ListingDisplayable {
     var title: String { get }
     var description: String { get }
     var size: String { get }
+    var titleAndSize: String { get }
+    var sellerName: String { get }
 }
 
 final class ListingViewModel: ListingDisplayable {
@@ -30,10 +32,12 @@ final class ListingViewModel: ListingDisplayable {
     let title: String
     let description: String
     let size: String
+    let titleAndSize: String
+    let sellerName: String
 
     // MARK: Private properties
 
-    let listing: Listing
+    private let listing: Listing
 
     // MARK: Initialization
 
@@ -50,5 +54,8 @@ final class ListingViewModel: ListingDisplayable {
         title = listing.title
         description = listing.description
         size = listing.size.uppercased()
+
+        titleAndSize = title + " size " + size
+        sellerName = listing.sellerName.uppercased()
     }
 }

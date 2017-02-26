@@ -60,5 +60,20 @@ final class ListingsViewController: UIViewController {
                 cell.setup(with: viewModel)
             }
             .disposed(by: disposeBag)
+
+        collectionView.rx.modelSelected(ListingDisplayable.self)
+            .asDriver()
+            .drive(onNext: { [weak self] viewModel in
+                self?.performSegue(withIdentifier: "ListingsToListingDetailSegue", sender: viewModel)
+            })
+            .disposed(by: disposeBag)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let detail = segue.destination as? ListingDetailViewController,
+            let sender = sender as? ListingDisplayable else { return }
+
+        detail.viewModel = sender
     }
 }

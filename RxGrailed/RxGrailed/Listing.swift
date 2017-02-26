@@ -17,6 +17,7 @@ struct Listing {
     let title: String
     let description: String
     let size: String
+    let sellerName: String
 }
 
 extension Listing: Mappable {
@@ -28,5 +29,6 @@ extension Listing: Mappable {
         self.title = try map.from("title")
         self.description = try map.from("description")
         self.size = try map.from("size")
+        self.sellerName = try map.from("user.username")
     }
 }
