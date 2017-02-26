@@ -50,7 +50,7 @@ final class ListingsViewController: UIViewController {
     }
 
     private func setupBindings() {
-        let paginate = collectionView.rx.contentOffset
+        let paginate = collectionView.rx.didScroll
             .filter { [weak self] offset in
                 guard let `self` = self else { return false }
 
@@ -59,7 +59,6 @@ final class ListingsViewController: UIViewController {
             // If we don't skip, after paginating once the network model will subscribe again and receive
             // another `onNext` event, which will trigger another pagination request
             .skip(1)
-            .flatMap { _ in return Observable.just() }
 
         viewModel.setupObservables(paginate: paginate)
 
