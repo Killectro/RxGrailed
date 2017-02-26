@@ -46,7 +46,7 @@
 		82810BC66273B429DCDB2947 /* Pods_RxGrailedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxGrailedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBB6104F66DEB28F4FC3737 /* Pods-RxGrailedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailedTests/Pods-RxGrailedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
-		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingViewModel.swift; path = RxGrailed/ListingViewModel.swift; sourceTree = SOURCE_ROOT; };
+		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingViewModel.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
 		A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+IsNearBottom.swift"; sourceTree = "<group>"; };
 		A430AB121E624F5D00E0C656 /* ListingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
 		A430AB151E6257D800E0C656 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -63,11 +63,11 @@
 		A4A395691E61E91100C06A89 /* RxGrailedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxGrailedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A3956D1E61E91100C06A89 /* RxGrailedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxGrailedTests.swift; sourceTree = "<group>"; };
 		A4A3956F1E61E91100C06A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4A3957F1E61ECA000C06A89 /* GrailedNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GrailedNetworkModel.swift; path = RxGrailed/GrailedNetworkModel.swift; sourceTree = SOURCE_ROOT; };
-		A4A395811E62086000C06A89 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Listing.swift; path = RxGrailed/Listing.swift; sourceTree = SOURCE_ROOT; };
+		A4A3957F1E61ECA000C06A89 /* GrailedNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GrailedNetworkModel.swift; path = GrailedNetworkModel.swift; sourceTree = "<group>"; };
+		A4A395811E62086000C06A89 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Listing.swift; path = Listing.swift; sourceTree = "<group>"; };
 		A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Algolia+RxSwift.swift"; sourceTree = "<group>"; };
-		A4A395861E62275400C06A89 /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingCollectionViewCell.swift; path = RxGrailed/ListingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
-		A4A395881E62305F00C06A89 /* ListingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingsViewModel.swift; path = RxGrailed/ListingsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		A4A395861E62275400C06A89 /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingCollectionViewCell.swift; path = ListingCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4A395881E62305F00C06A89 /* ListingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingsViewModel.swift; path = ListingsViewModel.swift; sourceTree = "<group>"; };
 		A70EC920A4D6715E4CADFC74 /* Pods_RxGrailed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxGrailed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFDACFB632659EEE13844E2 /* Pods-RxGrailedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailedTests/Pods-RxGrailedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,16 +98,17 @@
 				A430AB151E6257D800E0C656 /* AppCoordinator.swift */,
 			);
 			name = Coordinators;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		A4A3954C1E61E91000C06A89 = {
 			isa = PBXGroup;
 			children = (
+				FE73F80EDA5C0E6718DC93CB /* Frameworks */,
+				DD08D58F20F0A98A1678DFC5 /* Pods */,
 				A4A395561E61E91100C06A89 /* Products */,
 				A4A395571E61E91100C06A89 /* RxGrailed */,
 				A4A3956C1E61E91100C06A89 /* RxGrailedTests */,
-				DD08D58F20F0A98A1678DFC5 /* Pods */,
-				FE73F80EDA5C0E6718DC93CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,9 +124,9 @@
 		A4A395571E61E91100C06A89 /* RxGrailed */ = {
 			isa = PBXGroup;
 			children = (
+				A4A395781E61E95700C06A89 /* App */,
 				A430AB141E6257BF00E0C656 /* Coordinators */,
 				A4A395831E62149C00C06A89 /* Extensions */,
-				A4A395781E61E95700C06A89 /* App */,
 				A4A3957A1E61E96100C06A89 /* Models */,
 				A4A3957E1E61E97E00C06A89 /* NetworkModels */,
 				A4A395791E61E95B00C06A89 /* Resources */,
@@ -183,8 +184,8 @@
 		A4A3957C1E61E96B00C06A89 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A4A395881E62305F00C06A89 /* ListingsViewModel.swift */,
 				A430AB0E1E62342500E0C656 /* ListingViewModel.swift */,
+				A4A395881E62305F00C06A89 /* ListingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -192,8 +193,8 @@
 		A4A3957D1E61E97900C06A89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */,
 				A430AB121E624F5D00E0C656 /* ListingDetailViewController.swift */,
+				A4A3955A1E61E91100C06A89 /* ListingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,13 +211,14 @@
 			isa = PBXGroup;
 			children = (
 				A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */,
+				A430AB191E62650C00E0C656 /* Array+Safe.swift */,
 				A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */,
 				A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */,
 				A430AB171E6258AC00E0C656 /* UIStoryboard+RxGrailed.swift */,
-				A430AB191E62650C00E0C656 /* Array+Safe.swift */,
 				A430AB1B1E6266AF00E0C656 /* UIViewController+RxSegues.swift */,
 			);
 			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DD08D58F20F0A98A1678DFC5 /* Pods */ = {
@@ -371,7 +373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6C3A977692CD6C7040B2DC77 /* [CP] Check Pods Manifest.lock */ = {
@@ -386,7 +388,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6DE0002E25C9FE6BA6599CF0 /* [CP] Embed Pods Frameworks */ = {
