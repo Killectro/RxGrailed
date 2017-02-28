@@ -38,8 +38,6 @@ struct GrailedNetworkModel: GrailedNetworkModelable {
 
             let newListings = loadedSoFar + newPage
 
-            print(newListings.count)
-
             let obs = [
                 // Return our current list of Listings
                 Observable.just(newListings),
