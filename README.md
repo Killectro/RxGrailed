@@ -15,6 +15,7 @@ This app uses a few primary dependencies to simplify the implementation and abst
 - [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift/): Abstract away gritty details of asynchronous programming (and much much more)
 - [Kingfisher](https://github.com/onevcat/Kingfisher): Cleanly and simply download and decode images
 - [ModelMapper](https://github.com/lyft/mapper): Simple interface for defining JSON to model mappings
+- [Quick](https://github.com/Quick/Quick)/[Nimble](https://github.com/Quick/Nimble): Clean BDD testing
 
 ## Architecture
 
