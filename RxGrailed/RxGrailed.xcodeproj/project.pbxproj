@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02283443C3B21054ACB12005 /* Pods_RxGrailed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70EC920A4D6715E4CADFC74 /* Pods_RxGrailed.framework */; };
 		A40A5D791E65C91B0098B1B4 /* ListingsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */; };
+		A40A5D7C1E65FA6E0098B1B4 /* ListingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A5D7B1E65FA6E0098B1B4 /* ListingSpec.swift */; };
 		A430AB0D1E6233AC00E0C656 /* Kingfisher+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */; };
 		A430AB0F1E62342500E0C656 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0E1E62342500E0C656 /* ListingViewModel.swift */; };
 		A430AB111E623BF400E0C656 /* UIScrollView+IsNearBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */; };
@@ -47,6 +48,7 @@
 		9FBB6104F66DEB28F4FC3737 /* Pods-RxGrailedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailedTests/Pods-RxGrailedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A40A5D771E65C91A0098B1B4 /* RxGrailedTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxGrailedTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewModelSpec.swift; sourceTree = "<group>"; };
+		A40A5D7B1E65FA6E0098B1B4 /* ListingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingSpec.swift; sourceTree = "<group>"; };
 		A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
 		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
 		A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+IsNearBottom.swift"; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
+		A40A5D7A1E65FA640098B1B4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A40A5D7B1E65FA6E0098B1B4 /* ListingSpec.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A430AB141E6257BF00E0C656 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		A4A3956C1E61E91100C06A89 /* RxGrailedTests */ = {
 			isa = PBXGroup;
 			children = (
+				A40A5D7A1E65FA640098B1B4 /* Models */,
 				A40A5D761E65C8FF0098B1B4 /* ViewModels */,
 				A4A3956F1E61E91100C06A89 /* Info.plist */,
 			);
@@ -475,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40A5D791E65C91B0098B1B4 /* ListingsViewModelSpec.swift in Sources */,
+				A40A5D7C1E65FA6E0098B1B4 /* ListingSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
