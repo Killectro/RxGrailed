@@ -53,7 +53,14 @@ final class ListingViewModel: ListingDisplayable {
             // bind that error to our UI so we catch it here and just return `nil`
             .asDriver(onErrorJustReturn: nil)
 
-        price = String(format: "$%d", listing.price)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 0
+
+        // Force unwrap here is safe because we have an integer, which
+        // can always be turned into a currency value
+        price = formatter.string(from: listing.price as NSNumber)!
+
         designer = listing.designer.uppercased()
         title = listing.title
         description = listing.description

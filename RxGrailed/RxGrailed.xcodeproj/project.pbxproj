@@ -10,6 +10,7 @@
 		02283443C3B21054ACB12005 /* Pods_RxGrailed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70EC920A4D6715E4CADFC74 /* Pods_RxGrailed.framework */; };
 		A40A5D791E65C91B0098B1B4 /* ListingsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */; };
 		A40A5D7C1E65FA6E0098B1B4 /* ListingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A5D7B1E65FA6E0098B1B4 /* ListingSpec.swift */; };
+		A40A5D7E1E6605E90098B1B4 /* ListingViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A5D7D1E6605E90098B1B4 /* ListingViewModelSpec.swift */; };
 		A430AB0D1E6233AC00E0C656 /* Kingfisher+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */; };
 		A430AB0F1E62342500E0C656 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0E1E62342500E0C656 /* ListingViewModel.swift */; };
 		A430AB111E623BF400E0C656 /* UIScrollView+IsNearBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */; };
@@ -49,6 +50,7 @@
 		A40A5D771E65C91A0098B1B4 /* RxGrailedTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxGrailedTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewModelSpec.swift; sourceTree = "<group>"; };
 		A40A5D7B1E65FA6E0098B1B4 /* ListingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingSpec.swift; sourceTree = "<group>"; };
+		A40A5D7D1E6605E90098B1B4 /* ListingViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewModelSpec.swift; sourceTree = "<group>"; };
 		A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
 		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
 		A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+IsNearBottom.swift"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */,
 				A40A5D771E65C91A0098B1B4 /* RxGrailedTests-Bridging-Header.h */,
+				A40A5D7D1E6605E90098B1B4 /* ListingViewModelSpec.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40A5D7E1E6605E90098B1B4 /* ListingViewModelSpec.swift in Sources */,
 				A40A5D791E65C91B0098B1B4 /* ListingsViewModelSpec.swift in Sources */,
 				A40A5D7C1E65FA6E0098B1B4 /* ListingSpec.swift in Sources */,
 			);

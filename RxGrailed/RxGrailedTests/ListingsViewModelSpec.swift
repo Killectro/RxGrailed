@@ -18,7 +18,7 @@ func testListingJSON() -> [String : Any] {
     return [
         "id" : 12345,
         "retina_cover_photo" : [
-            "url" : "https://www.google.com"
+            "url" : "https://static.highsnobiety.com/wp-content/uploads/2016/10/02112116/cost-of-house-with-supreme-bricks-0.jpg"
         ],
         "price_i" : 300,
         "designer_names" : "Supreme",

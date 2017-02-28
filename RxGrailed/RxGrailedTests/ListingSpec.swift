@@ -27,7 +27,7 @@ class ListingSpec: QuickSpec {
             expect(subject).toNot(beNil())
 
             expect(subject.id) == 12345
-            expect(subject.imageUrl.absoluteString) == "https://www.google.com"
+            expect(subject.imageUrl.absoluteString) == "https://static.highsnobiety.com/wp-content/uploads/2016/10/02112116/cost-of-house-with-supreme-bricks-0.jpg"
             expect(subject.price) == 300
             expect(subject.designer) == "Supreme"
             expect(subject.title) == "Supreme Brick"
