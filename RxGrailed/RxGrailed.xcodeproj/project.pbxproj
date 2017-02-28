@@ -100,11 +100,12 @@
 		A40A5D761E65C8FF0098B1B4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A40A5D7D1E6605E90098B1B4 /* ListingViewModelSpec.swift */,
 				A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */,
 				A40A5D771E65C91A0098B1B4 /* RxGrailedTests-Bridging-Header.h */,
-				A40A5D7D1E6605E90098B1B4 /* ListingViewModelSpec.swift */,
 			);
 			name = ViewModels;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A40A5D7A1E65FA640098B1B4 /* Models */ = {
@@ -113,6 +114,7 @@
 				A40A5D7B1E65FA6E0098B1B4 /* ListingSpec.swift */,
 			);
 			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A430AB141E6257BF00E0C656 /* Coordinators */ = {
@@ -396,7 +398,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6C3A977692CD6C7040B2DC77 /* [CP] Check Pods Manifest.lock */ = {
@@ -411,7 +413,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6DE0002E25C9FE6BA6599CF0 /* [CP] Embed Pods Frameworks */ = {
