@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02283443C3B21054ACB12005 /* Pods_RxGrailed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70EC920A4D6715E4CADFC74 /* Pods_RxGrailed.framework */; };
+		A40A5D791E65C91B0098B1B4 /* ListingsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */; };
 		A430AB0D1E6233AC00E0C656 /* Kingfisher+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */; };
 		A430AB0F1E62342500E0C656 /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB0E1E62342500E0C656 /* ListingViewModel.swift */; };
 		A430AB111E623BF400E0C656 /* UIScrollView+IsNearBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */; };
@@ -21,7 +22,6 @@
 		A4A3955E1E61E91100C06A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A3955C1E61E91100C06A89 /* Main.storyboard */; };
 		A4A395601E61E91100C06A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A3955F1E61E91100C06A89 /* Assets.xcassets */; };
 		A4A395631E61E91100C06A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A395611E61E91100C06A89 /* LaunchScreen.storyboard */; };
-		A4A3956E1E61E91100C06A89 /* RxGrailedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3956D1E61E91100C06A89 /* RxGrailedTests.swift */; };
 		A4A395801E61ECA000C06A89 /* GrailedNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3957F1E61ECA000C06A89 /* GrailedNetworkModel.swift */; };
 		A4A395821E62086000C06A89 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395811E62086000C06A89 /* Listing.swift */; };
 		A4A395851E6214F200C06A89 /* Algolia+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */; };
@@ -45,8 +45,10 @@
 		63E97F05B349CD7EBE70FE48 /* Pods-RxGrailed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailed/Pods-RxGrailed.debug.xcconfig"; sourceTree = "<group>"; };
 		82810BC66273B429DCDB2947 /* Pods_RxGrailedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxGrailedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBB6104F66DEB28F4FC3737 /* Pods-RxGrailedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailedTests/Pods-RxGrailedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A40A5D771E65C91A0098B1B4 /* RxGrailedTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxGrailedTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewModelSpec.swift; sourceTree = "<group>"; };
 		A430AB0C1E6233AC00E0C656 /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
-		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingViewModel.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
+		A430AB0E1E62342500E0C656 /* ListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
 		A430AB101E623BF400E0C656 /* UIScrollView+IsNearBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+IsNearBottom.swift"; sourceTree = "<group>"; };
 		A430AB121E624F5D00E0C656 /* ListingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingDetailViewController.swift; sourceTree = "<group>"; };
 		A430AB151E6257D800E0C656 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -61,13 +63,12 @@
 		A4A395621E61E91100C06A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4A395641E61E91100C06A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A395691E61E91100C06A89 /* RxGrailedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxGrailedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4A3956D1E61E91100C06A89 /* RxGrailedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxGrailedTests.swift; sourceTree = "<group>"; };
 		A4A3956F1E61E91100C06A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4A3957F1E61ECA000C06A89 /* GrailedNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GrailedNetworkModel.swift; path = GrailedNetworkModel.swift; sourceTree = "<group>"; };
-		A4A395811E62086000C06A89 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Listing.swift; path = Listing.swift; sourceTree = "<group>"; };
+		A4A3957F1E61ECA000C06A89 /* GrailedNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrailedNetworkModel.swift; sourceTree = "<group>"; };
+		A4A395811E62086000C06A89 /* Listing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		A4A395841E6214F200C06A89 /* Algolia+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Algolia+RxSwift.swift"; sourceTree = "<group>"; };
-		A4A395861E62275400C06A89 /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingCollectionViewCell.swift; path = ListingCollectionViewCell.swift; sourceTree = "<group>"; };
-		A4A395881E62305F00C06A89 /* ListingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingsViewModel.swift; path = ListingsViewModel.swift; sourceTree = "<group>"; };
+		A4A395861E62275400C06A89 /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4A395881E62305F00C06A89 /* ListingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewModel.swift; sourceTree = "<group>"; };
 		A70EC920A4D6715E4CADFC74 /* Pods_RxGrailed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxGrailed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFDACFB632659EEE13844E2 /* Pods-RxGrailedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxGrailedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxGrailedTests/Pods-RxGrailedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,12 +93,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A40A5D761E65C8FF0098B1B4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A40A5D781E65C91B0098B1B4 /* ListingsViewModelSpec.swift */,
+				A40A5D771E65C91A0098B1B4 /* RxGrailedTests-Bridging-Header.h */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
 		A430AB141E6257BF00E0C656 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				A430AB151E6257D800E0C656 /* AppCoordinator.swift */,
 			);
-			name = Coordinators;
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
@@ -140,8 +149,8 @@
 		A4A3956C1E61E91100C06A89 /* RxGrailedTests */ = {
 			isa = PBXGroup;
 			children = (
+				A40A5D761E65C8FF0098B1B4 /* ViewModels */,
 				A4A3956F1E61E91100C06A89 /* Info.plist */,
-				A4A3956D1E61E91100C06A89 /* RxGrailedTests.swift */,
 			);
 			path = RxGrailedTests;
 			sourceTree = "<group>";
@@ -217,7 +226,6 @@
 				A430AB171E6258AC00E0C656 /* UIStoryboard+RxGrailed.swift */,
 				A430AB1B1E6266AF00E0C656 /* UIViewController+RxSegues.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -301,6 +309,7 @@
 					};
 					A4A395681E61E91100C06A89 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A4A395541E61E91000C06A89;
 					};
@@ -373,7 +382,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6C3A977692CD6C7040B2DC77 /* [CP] Check Pods Manifest.lock */ = {
@@ -388,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6DE0002E25C9FE6BA6599CF0 /* [CP] Embed Pods Frameworks */ = {
@@ -465,7 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4A3956E1E61E91100C06A89 /* RxGrailedTests.swift in Sources */,
+				A40A5D791E65C91B0098B1B4 /* ListingsViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,10 +635,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RxGrailedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.killectro.RxGrailedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RxGrailedTests/RxGrailedTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxGrailed.app/RxGrailed";
 			};
@@ -641,10 +653,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RxGrailedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.killectro.RxGrailedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RxGrailedTests/RxGrailedTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxGrailed.app/RxGrailed";
 			};

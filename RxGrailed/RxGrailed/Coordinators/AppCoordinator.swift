@@ -28,6 +28,8 @@ struct AppCoordinator {
 
         let viewController = navigationController.viewControllers.first as! ListingsViewController
 
+        viewController.viewModel = ListingsViewModel(networkModel: GrailedNetworkModel())
+
         viewController
             .didSelectViewModel
             .drive(onNext: { [weak viewController] viewModel in

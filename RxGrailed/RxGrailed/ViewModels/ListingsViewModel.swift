@@ -34,8 +34,8 @@ final class ListingsViewModel: ListingsDisplayable {
     private let networkModel: GrailedNetworkModelable
 
     // MARK: Lifecycle
-    init() {
-        networkModel = GrailedNetworkModel()
+    init(networkModel: GrailedNetworkModelable) {
+        self.networkModel = networkModel
     }
 
     func setupObservables(paginate: Observable<Void>) {

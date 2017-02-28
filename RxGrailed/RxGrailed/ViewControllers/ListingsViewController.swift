@@ -16,6 +16,8 @@ final class ListingsViewController: UIViewController {
 
     // MARK: Public properties
 
+    var viewModel: ListingsDisplayable!
+
     lazy var didSelectViewModel: Driver<ListingDisplayable> = self._didSelectViewModel.asDriver().filterNil()
 
     // MARK: Private properties
@@ -35,14 +37,11 @@ final class ListingsViewController: UIViewController {
 
     private let _didSelectViewModel = Variable<ListingDisplayable?>(nil)
     private let disposeBag = DisposeBag()
-    private var viewModel: ListingsDisplayable!
 
     // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel = ListingsViewModel()
 
         setupBindings()
     }
